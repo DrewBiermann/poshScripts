@@ -52,4 +52,4 @@ foreach ($User in $UserList) {
 
 #Send e-mail notification
 
-Send-MailMessage -From $configFile.Email.From -to 'dbiermann@cityofmontrose.org'<#$configFile.Email.To#> -Subject $configFile.Email.Subject -Body $configFile.Email.Body -SmtpServer $configFile.Email.SmtpServer -port $configFile.Email.Port -Attachments $fileName –DeliveryNotificationOption OnSuccess
+Send-MailMessage -From $configFile.Email.From -to $configFile.Email.To -Subject $configFile.Email.Subject -Body $configFile.Email.Body -SmtpServer $configFile.Email.SmtpServer -port $configFile.Email.Port -Attachments $fileName –DeliveryNotificationOption OnSuccess
